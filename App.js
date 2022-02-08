@@ -22,7 +22,7 @@ class App extends React.Component {
   return(
     <SafeAreaView>
       <TouchableOpacity
-      onPress={ () => alert("mayuri")}>
+      onPress={ () => alert("smart grower")}>
       <Text>Press Here</Text>
       </TouchableOpacity>
     </SafeAreaView>
