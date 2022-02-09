@@ -14,16 +14,36 @@ import {
   Text,
   View,
 } from 'react-native';
+import CodePush from 'react-native-code-push';
 
 
 import codePush from "react-native-code-push";
 class App extends React.Component {
+
+
+  codepushsync(){
+    CodePush.sync({
+      installMode:CodePush.InstallMode.IMMEDIATE,
+      updateDialog:true
+    },(status) => {
+      for(var key in CodePush.SyncStatus)
+      {
+        if(status === CodePush.SyncStatus[key])
+        {
+          console.log("udated")
+          break;
+        }
+      }
+    })
+  }
+
+
   render(){
   return(
     <SafeAreaView>
       <TouchableOpacity
-      onPress={ () => alert("smart grower")}>
-      <Text>smart grower syngenta pavithra</Text>
+      onPress={ () => codepushsync()}>
+      <Text>smart grower syngenta pavithra yashwanth</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
