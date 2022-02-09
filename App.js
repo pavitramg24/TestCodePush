@@ -18,25 +18,17 @@ import CodePush from 'react-native-code-push';
 
 
 import codePush from "react-native-code-push";
+
+
+let CodePushOptions = {
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+  mandatoryInstallMode: CodePush.InstallMode.IMMEDIATE,
+  updateDialog: {
+    appendReleaseDescription: true,
+    title: "a new update is available"
+}
+}
 class App extends React.Component {
-
-
-  codepushsync(){
-    CodePush.sync({
-      installMode:CodePush.InstallMode.IMMEDIATE,
-      updateDialog:true
-    },(status) => {
-      for(var key in CodePush.SyncStatus)
-      {
-        if(status === CodePush.SyncStatus[key])
-        {
-          console.log("udated")
-          break;
-        }
-      }
-    })
-  }
-
 
   render(){
   return(
@@ -71,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App = codePush(App);;
+export default CodePush(CodePushOptions)(App);
