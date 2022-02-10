@@ -21,7 +21,7 @@ import codePush from "react-native-code-push";
 
 
 let CodePushOptions = {
-  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+  checkFrequency: CodePush.CheckFrequency.ON_APP_START,
   mandatoryInstallMode: CodePush.InstallMode.IMMEDIATE,
   updateDialog: {
     appendReleaseDescription: true,
@@ -36,8 +36,8 @@ class App extends React.Component {
        <Text>smart grower syngenta</Text>
       <TouchableOpacity
       onPress={ () => this.codepushsync()}>
-      <Text>smart grower syngenta</Text>
-      <Text>smart grower syngenta</Text>
+      <Text>smart grower syngenta Application</Text>
+      <Text>smart grower syngenta Application</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
