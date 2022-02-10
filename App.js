@@ -33,11 +33,11 @@ class App extends React.Component {
   render(){
   return(
     <SafeAreaView>
-       <Text>smart grower syngenta pavithra</Text>
+       <Text>smart grower syngenta</Text>
       <TouchableOpacity
       onPress={ () => this.codepushsync()}>
-      <Text>smart grower syngenta pavithra</Text>
-      <Text>smart grower syngenta pavithra</Text>
+      <Text>smart grower syngenta</Text>
+      <Text>smart grower syngenta</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
