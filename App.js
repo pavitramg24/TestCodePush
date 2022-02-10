@@ -33,7 +33,6 @@ class App extends React.Component {
   render(){
   return(
     <SafeAreaView>
-       <Text>smart grower syngenta</Text>
       <TouchableOpacity
       onPress={ () => this.codepushsync()}>
       <Text>smart grower syngenta Application</Text>
