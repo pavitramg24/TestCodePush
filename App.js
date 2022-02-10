@@ -34,7 +34,7 @@ class App extends React.Component {
   return(
     <SafeAreaView>
       <TouchableOpacity
-      onPress={ () => this.codepushsync()}>
+      onPress={ () => alert("syngenta")}>
       <Text>Code push check on smart grower syngenta Application</Text>
       <Text>Code push check on smart grower syngenta Application</Text>
       </TouchableOpacity>
